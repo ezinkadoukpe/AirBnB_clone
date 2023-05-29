@@ -31,13 +31,14 @@ class FileStorage:
         with open(self.__file_path, 'w') as f:
             json.dump(objdict, f)
 
-    def relaod(self):
+    def reload(self):
         """deserializes the JSON file to __objects"""
         try:
             with open(self.__file_path, 'r') as file:
                 data = json.load(file)
                 for key, value in data.items():
-                    obj = self.classes[value["__class__"]](**value)
-                    self.__objects[key] = obj
+                    class_name, obj_id = key.split(".")
+                    class_obj = eval(calss_name)
+                    self.__objects[key] = class_obj(**value)
         except FileNotFoundError:
             pass
