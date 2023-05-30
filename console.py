@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
+"""Console"""
 
 import cmd
 
 
 class HBNBCommand(cmd.Cmd):
+     """Defines the HolbertonBnB command interpreter.
+
+    Attributes:
+        prompt (str): The command prompt.
+    """
+
     prompt = "(hbnb) "
 
     def do_quit(self, arg):
