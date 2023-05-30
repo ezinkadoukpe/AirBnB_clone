@@ -1,5 +1,5 @@
-#!/usr/bin/env python3
-"""Console"""
+#!/usr/bin/python3
+"""Defines the HBnB console."""
 
 import cmd
 
