@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Defines the HBnB console."""
-
+"""Defines a HBNB console."""
 import cmd
 
 
@@ -19,6 +18,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_EOF(self, arg):
         """Exit the program on EOF (Ctrl+D)"""
+        print("")
         return True
 
     def emptyline(self):
@@ -28,4 +28,3 @@ class HBNBCommand(cmd.Cmd):
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
-
