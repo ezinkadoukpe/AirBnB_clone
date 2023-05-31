@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Defines a HBNB console."""
+
 import cmd
 
 
@@ -10,7 +11,7 @@ class HBNBCommand(cmd.Cmd):
         prompt (str): The command prompt.
     """
 
-    prompt = "(hbnb) "
+    prompt = '(hbnb) '
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
@@ -18,7 +19,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_EOF(self, arg):
         """Exit the program on EOF (Ctrl+D)"""
-        print("")
+        print('')
         return True
 
     def emptyline(self):
